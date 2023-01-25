@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1 style="color:chocolate;">Html form intercation with js</h1>
+
+  <form onsubmit="calc(); return false;" >
+  <label for="totalmarks">Total marks</label>
+  <input type="number" id="tm" placeholder="Enter your Tm">
+
+  <label for="Obtainmarks">Obtain marks</label>
+  <input type="number" id="om" placeholder="Enter your Om">
+
+  <button type="submit">click</button>
+
+  <h1 id="what" style="color:black">Faizan </h1>
+</form>
+
+<script>
+
+function calc(){
+let studentTotal_marks= document.querySelector("#tm").value;
+
+let studentObtain_marks= document.querySelector("#om").value;
+
+let resultof_student = studentObtain_marks/studentTotal_marks * 100;
+
+document.querySelector("#what").innerHTML="You Have Got It &nbsp" + resultof_student
+
+}
+
+</script>
+</body>
+</html>
